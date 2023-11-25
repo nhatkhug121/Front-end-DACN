@@ -173,6 +173,10 @@ p>a {
 a.light {
   color: var(--light-color);
 }
+a{
+  text-decoration: none !important;
+  /* color: #495057 !important; */
+}
 a:hover {
   text-decoration: none;
   color: var(--primary-color);
@@ -1036,8 +1040,8 @@ h2.product-title{
   padding-bottom: 4em;
 }
 .padding-large {
-  padding-top: 7em;
-  padding-bottom: 7em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 .padding-xlarge {
   padding-top: 9.5em;
@@ -2405,7 +2409,7 @@ a.blog-categories:hover{
 /*----- Icon Box Section
 --------------------------------------------------------------*/
 #shipping-information {
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 #shipping-information .icon-box {
     display: flex;
@@ -2895,4 +2899,29 @@ section.categories .category-content a{
 /* nike-prodcut */
 .product-image{
   height: 429px;
+}
+
+
+/* backtotop */
+
+
+.go-top-btn {
+  z-index: 100;
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border: 3px solid #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-top-btn img {
+  width: 50px;
+  height: 30px;
 }
