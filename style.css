@@ -1956,6 +1956,7 @@ blockquote cite {
 .main-swiper .swiper-slide {
     height: 90vh;
     min-height: 700px;
+    width: 33,3%;
 }
 .main-swiper .container {
     max-width: 1400px;
@@ -2976,3 +2977,12 @@ a{
   color:#58778b !important;
 }
 /* CART= ====== */
+
+/* .primary-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  /* transform: translate(); */
+} */
