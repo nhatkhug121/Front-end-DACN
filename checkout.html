@@ -18,8 +18,16 @@
       media="all"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,212 +40,538 @@
     ================================================== -->
   </head>
   <body>
-    <div class="page payment-page">
-      <section class="payment-form dark">
-        <div class="container">
-          <div class="block-heading">
-            <h2>Check Out</h2>
+    <section style="background-color: #eee">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col">
+            <div class="card">
+              <div class="card-body card-body-customize p-4">
+                <div class="row row-customize">
+                  <div class="col-lg-7">
+                    <h5 class="mb-3">
+                      <a href="./cart.html" class="text-body"
+                        ><i class="fas fa-long-arrow-alt-left me-2"></i>Check
+                        Out</a
+                      >
+                    </h5>
+                    <hr />
+                    <div class="card-details">
+                      <h3 class="title">Thông Tin Nhận Hàng</h3>
+                      <div class="col col--two">
+                        <section
+                          class="section"
+                          data-select2-id="select2-data-213-ykcw"
+                        >
+                          <div class="section__header">
+                            <div class="layout-flex"></div>
+                          </div>
+                          <div
+                            class="section__content"
+                            data-select2-id="select2-data-212-2d3p"
+                          >
+                            <div class="fieldset">
+                              <div
+                                class="field"
+                                data-bind-class="{'field--show-floating-label': email}"
+                              >
+                                <div class="field__input-wrapper">
+                                  <input
+                                    name="email"
+                                    id="email"
+                                    type="email"
+                                    class="field__input"
+                                    data-bind="email"
+                                    value=""
+                                    placeholder="Email"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                                data-bind-class="{'field--show-floating-label': billing.name}"
+                              >
+                                <div class="field__input-wrapper">
+                                  <input
+                                    name="billingName"
+                                    id="billingName"
+                                    type="text"
+                                    class="field__input"
+                                    data-bind="billing.name"
+                                    value=""
+                                    placeholder="Họ Và Tên"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                                data-bind-class="{'field--show-floating-label': billing.phone}"
+                              >
+                                <div
+                                  class="field__input-wrapper field__input-wrapper--connected"
+                                  data-define="{phoneInput: new InputPhone(this)}"
+                                >
+                                  <label
+                                    for="billingPhone"
+                                    class="field__label"
+                                  >
+                                  </label>
+                                  <input
+                                    name="billingPhone"
+                                    id="billingPhone"
+                                    type="tel"
+                                    class="field__input"
+                                    data-bind="billing.phone"
+                                    value=""
+                                    placeholder="Số Điện Thoại"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                                data-bind-class="{'field--show-floating-label': billing.address}"
+                              >
+                                <div class="field__input-wrapper">
+                                  <input
+                                    name="billingAddress"
+                                    id="billingAddress"
+                                    type="text"
+                                    class="field__input"
+                                    data-bind="billing.address"
+                                    value=""
+                                    placeholder="Địa Chỉ"
+                                  />
+                                </div>
+                              </div>
+                              <div class="area-vn">
+                                <select
+                                  class="form-select form-select-sm mb-3"
+                                  id="city"
+                                  aria-label=".form-select-sm"
+                                >
+                                  <option value="" selected>
+                                    Chọn tỉnh thành
+                                  </option>
+                                </select>
+                                <select
+                                  class="form-select form-select-sm mb-3"
+                                  id="district"
+                                  aria-label=".form-select-sm"
+                                  aria-placeholder="Tỉnh Thành"
+                                >
+                                  <option value="" selected>
+                                    Chọn quận huyện
+                                  </option>
+                                </select>
+                                <select
+                                  class="form-select form-select-sm"
+                                  id="ward"
+                                  aria-label=".form-select-sm"
+                                >
+                                  <option value="" selected>
+                                    Chọn phường xã
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <div class="fieldset">
+                          <h3 class="visually-hidden">Ghi chú</h3>
+                          <div
+                            class="field"
+                            data-bind-class="{'field--show-floating-label': note}"
+                          >
+                            <div class="field__input-wrapper">
+                              <label for="note" class="field__label">
+                                Ghi chú (tùy chọn)
+                              </label>
+                              <textarea
+                                name="note"
+                                id="note"
+                                class="field__input"
+                                data-bind="note"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                      <h4 class="method-pay">Phương Thức Thanh Toán</h4>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne"
+                          >
+                            <p>
+                              Chuyển Khoản Ngân Hàng
+                              <i class="fa-solid fa-money-check-dollar"></i>
+                            </p>
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            <div class="blank-slate">
+                              <p>
+                                <img src="./images/thanh-toan.png" alt="" />
+                              </p>
+                              <p>
+                                <strong
+                                  >Mua hàng&nbsp;trên website
+                                  MetalShoes.vn:</strong
+                                >
+                              </p>
+                              <p><strong>1) Giao -&nbsp;Nhận:</strong></p>
+                              <p>
+                                MetalShoes.vn ship hàng toàn quốc COD - Kiểm tra
+                                hàng trước và thanh toán trực tiếp khi nhận
+                                hàng.&nbsp;
+                              </p>
+
+                              <p>
+                                <strong
+                                  >2) Đặt cọc - Xác nhận đơn hàng - Giao hàng: (
+                                  Áp dụng cho KH ngoại thành HCM và mua lần
+                                  đầu&nbsp; )</strong
+                                >
+                              </p>
+                              <p>
+                                Bạn cọc bằng 2 hình thức nạp card điện thoại
+                                mobifone hoặc chuyển&nbsp; khoản
+                                <strong>200K</strong> vào tài khoản ngân hàng
+                                <strong
+                                  >(nội dung ck: ghi họ tên và số điện
+                                  thoại)</strong
+                                >. Kingshoes liện lạc xác nhận cọc và ship hàng
+                                ngay cho Bạn.
+                              </p>
+                              <p>
+                                &nbsp;&nbsp;&nbsp;<img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                />&nbsp;Ngân Hàng <b>VietcomBank</b>&nbsp;<img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><br />
+                                ✅ STK: <b>101 770 2165</b>&nbsp;<br />
+                                ✅ CTK: <b>METAL SHOES</b>&nbsp;✅ CN VCB Đồng
+                                Nai
+                              </p>
+
+                              <p>
+                                &nbsp;<img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                />&nbsp;Ngân Hàng
+                                <strong>MB Bank</strong>&nbsp;<img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><img
+                                  alt=""
+                                  height="16"
+                                  src="https://static.xx.fbcdn.net/images/emoji.php/v9/ffc/1/16/1f3e6.png"
+                                  width="16"
+                                /><br />
+                                ✅ STK: <b>1696 9696 9690</b>&nbsp;<br />
+                                ✅ CTK: <b>METAL SHOES</b>&nbsp;✅ CN MB Bank -
+                                Đồng Nai
+                              </p>
+
+                              <p>
+                                <img
+                                  alt="King Shoes tài khoản ngân hàng"
+                                  height="609"
+                                  src="https://kingshoes.vn/data/upload/media/10-2022/Ngan-hang-tai-khoan-king-shoes.jpeg"
+                                  width="500"
+                                />
+                              </p>
+
+                              <p>
+                                <strong
+                                  >---&gt;&gt;&gt; Chúng tôi biết BẠN có nhiều
+                                  sự lựa chọn. Cảm ơn BẠN đã chọn METAL
+                                  SHOES.</strong
+                                >
+                              </p>
+                            </div>
+                            <strong>Trạng Thái:</strong>
+                            <code style="padding: 5px"
+                              >Đang Chờ Thanh Toán...</code
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            STRIPE
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            <strong>Trạng Thái:</strong>
+                            <code style="padding: 5px"
+                              >Đang Chờ Thanh Toán</code
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            <p>
+                              Thanh Toán Khi Nhận Hàng
+                              <i class="fa-solid fa-truck-fast"></i>
+                            </p>
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            <strong
+                              >This is the third item's accordion body.</strong
+                            >
+                            It is hidden by default, until the collapse plugin
+                            adds the appropriate classes that we use to style
+                            each element. These classes control the overall
+                            appearance, as well as the showing and hiding via
+                            CSS transitions. You can modify any of this with
+                            custom CSS or overriding our default variables. It's
+                            also worth noting that just about any HTML can go
+                            within the <code>.accordion-body</code>, though the
+                            transition does limit overflow.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- product detail -->
+                  <div class="col-lg-5">
+                    <div
+                      class="card col5-customize bg-primary text-white rounded-3"
+                    >
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <h5 class="mb-0">Card details</h5>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                            class="img-fluid rounded-3"
+                            style="width: 45px"
+                            alt="Avatar"
+                          />
+                        </div>
+
+                        <p class="small mb-2">Card type</p>
+
+                        <div class="card mb-3">
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                              <div class="d-flex flex-row align-items-center">
+                                <div>
+                                  <img
+                                    src="./images/ADIDAS NMD_G1.jpg"
+                                    class="img-fluid rounded-3"
+                                    alt="Shopping item"
+                                    style="width: 65px"
+                                  />
+                                </div>
+                                <div class="ms-3">
+                                  <h5>Nike Air Max 90</h5>
+                                  <p class="small mb-0">size 42</p>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row align-items-center">
+                                <div style="width: 50px">
+                                  <h5 class="fw-normal mb-0">2</h5>
+                                </div>
+                                <div style="width: 80px">
+                                  <h5 class="mb-0">$900</h5>
+                                </div>
+                                <a href="#!" style="color: #cecece"
+                                  ><i class="fas fa-trash-alt"></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="d-flex justify-content-between">
+                          <p class="mb-2">Subtotal</p>
+                          <p class="mb-2">$4798.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="mb-2">Shipping</p>
+                          <p class="mb-2">$20.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-4">
+                          <p class="mb-2">Total(Incl. taxes)</p>
+                          <p class="mb-2">$4818.00</p>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                          <a class="back-cart" href="./cart.html">
+                            <i class="fa-solid fa-chevron-left"></i> Quay Lại
+                            Giỏ Hàng</a
+                          >
+                          <button
+                            type="button"
+                            class="btn btn-info btn-block btn-lg"
+                          >
+                            <div class="d-flex justify-content-between">
+                              <span
+                                >Thanh Toán
+                                <i class="fas fa-long-arrow-alt-right ms-2"></i
+                              ></span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <form>
-            <!-- sản phẩm -->
-            <div class="products">
-              <h3 class="title">Checkout</h3>
-              <div class="item">
-                <span class="price">$200</span>
-                <p class="item-name">Product 1</p>
-                <p class="item-description">Lorem ipsum dolor sit amet</p>
-              </div>
-              <div class="item">
-                <span class="price">$120</span>
-                <p class="item-name">Product 2</p>
-                <p class="item-description">Lorem ipsum dolor sit amet</p>
-              </div>
-              <div class="total">Total<span class="price">$320</span></div>
-            </div>
-            <!-- thông tin nhận hàng -->
-            <div class="card-details">
-              <h3 class="title">Thông Tin Nhận Hàng</h3>
-              <div class="col col--two">
-								<section class="section" data-select2-id="select2-data-213-ykcw">
-									<div class="section__header">
-										<div class="layout-flex">
-										
-									
-										</div>
-									</div>
-									<div class="section__content" data-select2-id="select2-data-212-2d3p">
-										<div class="fieldset">
-											
-
-											
-												
-													<div class="field " data-bind-class="{'field--show-floating-label': email}">
-														<div class="field__input-wrapper">
-															<label for="email" class="field__label">
-																Email
-															</label>
-															<input name="email" id="email" type="email" class="field__input" data-bind="email" value="">
-														</div>
-														
-													</div>
-												
-											
-
-											<div class="field" data-bind-class="{'field--show-floating-label': billing.name}">
-												<div class="field__input-wrapper">
-													<label for="billingName" class="field__label">Họ và tên</label>
-													<input name="billingName" id="billingName" type="text" class="field__input" data-bind="billing.name" value="">
-												</div>
-												
-											</div>
-											
-											<div class="field " data-bind-class="{'field--show-floating-label': billing.phone}">
-												<div class="field__input-wrapper field__input-wrapper--connected" data-define="{phoneInput: new InputPhone(this)}">
-													<label for="billingPhone" class="field__label">
-														Số điện thoại
-													</label>
-													<input name="billingPhone" id="billingPhone" type="tel" class="field__input" data-bind="billing.phone" value="">
-													
-												</div>
-												
-											</div>
-											
-											
-											<div class="field" data-bind-class="{'field--show-floating-label': billing.address}">
-												<div class="field__input-wrapper">
-													<label for="billingAddress" class="field__label">
-														Địa chỉ
-													</label>
-													<input name="billingAddress" id="billingAddress" type="text" class="field__input" data-bind="billing.address" value="">
-												</div>
-												
-											</div>
-											
-											
-                      <div class="area-vn">
-                        <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                        <option value="" selected>Chọn tỉnh thành</option>           
-                        </select>
-                                  
-                        <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                        <option value="" selected>Chọn quận huyện</option>
-                        </select>
-                        
-                        <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
-                        <option value="" selected>Chọn phường xã</option>
-                        </select>
-                      </div>    
-											
-											
-											
-											
-										</div>
-									</div>
-								</section>
-								
-								<div class="fieldset">
-									<h3 class="visually-hidden">Ghi chú</h3>
-									<div class="field" data-bind-class="{'field--show-floating-label': note}">
-										<div class="field__input-wrapper">
-											<label for="note" class="field__label">
-												Ghi chú (tùy chọn)
-											</label>
-											<textarea name="note" id="note" class="field__input" data-bind="note"></textarea>
-										</div>
-										
-									</div>
-								</div>
-								
-							</div>
-            </div>
-            <!-- thanh toán -->
-            <div class="accordion" id="accordionExample">
-              <h4 class="method-pay">Phương Thức Thanh Toán</h4>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                   MoMo
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    VNPAY
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                   Thanh Toán Khi Nhận Hàng
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            </div>
-      
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
     <script src="./js/checkout.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-   <script>
- var citis = document.getElementById("city");
-var districts = document.getElementById("district");
-var wards = document.getElementById("ward");
-var Parameter = {
- url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
- method: "GET", 
- responseType: "application/json", 
-};
-var promise = axios(Parameter);
-promise.then(function (result) {
- renderCity(result.data);
-});
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+      var citis = document.getElementById("city");
+      var districts = document.getElementById("district");
+      var wards = document.getElementById("ward");
+      var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+      };
+      var promise = axios(Parameter);
+      promise.then(function (result) {
+        renderCity(result.data);
+      });
 
-function renderCity(data) {
- for (const x of data) {
-   citis.options[citis.options.length] = new Option(x.Name, x.Id);
- }
- citis.onchange = function () {
-   district.length = 1;
-   ward.length = 1;
-   if(this.value != ""){
-     const result = data.filter(n => n.Id === this.value);
+      function renderCity(data) {
+        for (const x of data) {
+          citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function () {
+          district.length = 1;
+          ward.length = 1;
+          if (this.value != "") {
+            const result = data.filter((n) => n.Id === this.value);
 
-     for (const k of result[0].Districts) {
-       district.options[district.options.length] = new Option(k.Name, k.Id);
-     }
-   }
- };
- district.onchange = function () {
-   ward.length = 1;
-   const dataCity = data.filter((n) => n.Id === citis.value);
-   if (this.value != "") {
-     const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+            for (const k of result[0].Districts) {
+              district.options[district.options.length] = new Option(
+                k.Name,
+                k.Id
+              );
+            }
+          }
+        };
+        district.onchange = function () {
+          ward.length = 1;
+          const dataCity = data.filter((n) => n.Id === citis.value);
+          if (this.value != "") {
+            const dataWards = dataCity[0].Districts.filter(
+              (n) => n.Id === this.value
+            )[0].Wards;
 
-     for (const w of dataWards) {
-       wards.options[wards.options.length] = new Option(w.Name, w.Id);
-     }
-   }
- };
-}
- </script>
+            for (const w of dataWards) {
+              wards.options[wards.options.length] = new Option(w.Name, w.Id);
+            }
+          }
+        };
+      }
+    </script>
   </body>
 </html>

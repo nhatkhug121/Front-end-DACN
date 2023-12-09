@@ -2093,7 +2093,7 @@ blockquote cite {
   padding: 10px;
   cursor: pointer;
   margin-bottom: 20px;
-  width: 100%;
+  width: 70%;
 }
 .product-item .cart-concern {
   background: var(--light-color);
@@ -3002,7 +3002,7 @@ section.categories .category-content a {
 
 /* nike-prodcut */
 .product-image {
-  height: 350px;
+  height: 260px;
 }
 
 /* backtotop */
@@ -3096,3 +3096,83 @@ a {
   color: white !important;
 }
 /* CART= ====== */
+.offcanvas {
+  z-index: 10000 !important;
+}
+.name-cart {
+  font-size: 15px;
+}
+.header .ms-3 {
+  font-size: 18px !important;
+}
+.offcanvas-body .mb-0 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #191919;
+}
+
+.modal-cart {
+  position: relative;
+  display: inline-block;
+}
+.offcanvas-end {
+  width: 450px !important;
+}
+.offcanvas-body .img-fluid {
+  width: 100px;
+}
+
+.value-product {
+  border: 1.5px solid #ddd;
+  border-radius: 99px;
+  text-align: center;
+  padding: 0.45rem 0.8rem;
+  outline: 0;
+  margin: 0;
+  width: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.select-cart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 20px;
+}
+.fa-trash-can {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-to-cart {
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+  border-radius: none !important;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.account-product,
+.total-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(191, 191, 191);
+}
+.account-product,
+.total-product p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.account-product,
+.total-product span {
+  font-size: 18px;
+}
+.link-product {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}

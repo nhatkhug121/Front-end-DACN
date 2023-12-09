@@ -18,6 +18,10 @@
       media="all"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/vendor.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -108,16 +112,60 @@
                       <i class="icon icon-user"></i>
                     </a>
                   </li>
-                  <li class="header-icon">
-                    <a href="cart.html">
-                      <i class="icon icon-shopping-cart"></i>
+                  <li class="header-icon modal-cart">
+                    <a href="#">
+                      <i
+                        class="icon icon-shopping-cart"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"
+                      >
+                        <!-- <div
+                          class="offcanvas offcanvas-end"
+                          tabindex="-1"
+                          id="offcanvasRight"
+                          aria-labelledby="offcanvasRightLabel"
+                        >
+                          <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Shoes Cart</h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="offcanvas"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="offcanvas-body">
+                            <div class="d-flex flex-row align-items-center">
+                              <div>
+                                <img
+                                  src="./images/ADIDAS NMD_G1.jpg"
+                                  class="img-fluid rounded-3"
+                                  alt="Shopping item"
+                                  style="width: 65px"
+                                />
+                              </div>
+                              <div class="ms-3">
+                                <h5 class="name-cart">Nike Air Max 90</h5>
+                                <p class="small mb-0">size 42</p>
+                              </div>
+
+                              <div class="d-flex">
+                                <p class="small mb-0">$7.00</p>
+                                <input
+                                  type="number"
+                                  class="form-control form-control-lg text-center"
+                                  value="1"
+                                />
+                                <i class="fa-regular fa-trash-can"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                      </i>
                     </a>
                   </li>
-                  <!-- <li class="header-icon">
-                    <a href="wishlist.html">
-                      <i class="icon icon-heart"></i>
-                    </a>
-                  </li> -->
+
                   <li class="user-items search-item pe-3">
                     <a href="#" class="search-button">
                       <i class="icon icon-search"></i>
@@ -2081,6 +2129,86 @@
       </div>
       <hr />
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Shoes Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="link-product d-flex flex-row align-items-center">
+          <div>
+            <img
+              src="./images/ADIDAS NMD_G1.jpg"
+              class="img-fluid rounded-3"
+              alt="Shopping item"
+              style="width: 65px"
+            />
+          </div>
+          <div class="ms-3">
+            <h5 class="name-cart">Nike Air Max 90</h5>
+            <p class="small mb-0">size 42</p>
+          </div>
+
+          <div class="d-flex select-cart">
+            <p class="small mb-0">$7.00</p>
+            <input class="value-product" type="number" min="0" value="1" />
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+        <hr />
+
+        <div class="link-product d-flex flex-row align-items-center">
+          <div>
+            <img
+              src="./images/ADIDAS NMD_G1.jpg"
+              class="img-fluid rounded-3"
+              alt="Shopping item"
+              style="width: 65px"
+            />
+          </div>
+          <div class="ms-3">
+            <h5 class="name-cart">Nike Air Max 90</h5>
+            <p class="small mb-0">size 42</p>
+          </div>
+
+          <div class="d-flex select-cart">
+            <p class="small mb-0">$7.00</p>
+            <input class="value-product" type="number" min="0" value="1" />
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <hr />
+      <div class="offcanvas-footer">
+        <div class="account-product">
+          <p>Số Sản Phẩm:</p>
+          <span>2</span>
+        </div>
+        <div class="total-product">
+          <p>Tổng:</p>
+          <span>$182.00</span>
+        </div>
+        <a href="./cart.html">
+          <button class="btn-dark btn-to-cart">
+            Giỏ Hàng <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </div>
     <script src="./js/backtotop.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/plugins.js"></script>
