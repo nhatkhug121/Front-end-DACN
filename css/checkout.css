@@ -226,3 +226,51 @@ h3 {
     height: 100vh !important;
   }
 }
+.modal-content {
+  width: 800px;
+  right: 120px;
+  top: 20px;
+}
+#staticBackdropLabel {
+  margin-left: 165px;
+  /* color: #0071c4; */
+  font-size: 18px;
+  font-weight: 600;
+  color: #3b99e0;
+}
+.modal-body {
+  background-color: #f3f3f3;
+}
+.modal-header {
+  background-color: #e1e1e1;
+}
+.info-customer p {
+  font-size: 15px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.title-invoice {
+  text-align: center;
+  font-size: 14px;
+  background-color: #e1e1e1;
+  padding: 10px;
+  font-weight: 600;
+  color: black;
+}
+.btn-ad {
+  background-color: #333;
+  color: white;
+  font-size: 13px;
+}
+.btn-ad:hover {
+  background-color: gray;
+}
+.title-noti {
+  font-weight: 600;
+  font-size: 14px;
+  font-style: oblique;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.accordion p {
+  font-size: 14px;
+}

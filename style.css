@@ -2093,7 +2093,7 @@ blockquote cite {
   padding: 10px;
   cursor: pointer;
   margin-bottom: 20px;
-  width: 70%;
+  width: 100%;
 }
 .product-item .cart-concern {
   background: var(--light-color);
@@ -3002,7 +3002,7 @@ section.categories .category-content a {
 
 /* nike-prodcut */
 .product-image {
-  height: 260px;
+  height: 350px;
 }
 
 /* backtotop */
